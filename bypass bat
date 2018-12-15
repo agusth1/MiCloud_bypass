@@ -1,0 +1,18 @@
+@echo-off
+title MiCloud ByPass by REV31ONE
+color 0a
+fastboot=bin/fastboot.exe
+
+echo "MiCloud ByPass tool by REV31ONE"
+echo
+echo "Please reboot your Xiaomi to recobery mode then plug your Xiaomi and press any key to continue."
+pause
+
+fastboot devices
+fastboot –w
+fastboot erase config
+fastboot reboot
+
+echo "Rebooting your phone..."
+echo "Of your phone not rebooting please hold the power button"
+pause
